@@ -34,3 +34,50 @@ function validarCategoria(elemento) {
     }
 }
 
+function numeroInt(valor) {
+  return Number.parseInt(valor, 10);
+}
+
+function validarQuantidade(input, quantidadeErro){
+  let msgErro = document.querySelector('.quantidadeErro');
+  let numero = numeroInt(input.value);
+  if(input.value.trim() === ""){
+    input.style.borderColor = 'red';
+    msgErro.innerText = "Campo obrigatório!";
+    return false;
+  }
+  if(isNaN(numero)){
+    input.style.borderColor = 'red';
+    msgErro.innerText = "Valor informado é inválido!";
+    return false;
+  }
+  input.style.borderColor = 'black';
+  msgErro.innerText = "";
+  return true;
+}
+
+function pontoNumeroFloat(valor){
+  return Number.parseFloat(valor.replace(",", "."));
+}
+
+function validarPreco(input, precoErro){
+  let msgErro = document.querySelector('.precoErro');
+  let numero = pontoNumeroFloat(input.value);
+  if(input.value.trim() === ""){
+    input.style.borderColor = 'red';
+    msgErro.innerText = "Campo obrigatório!";
+    return false;
+  }
+  if(isNaN(numero)){
+    input.style.borderColor = 'red';
+    msgErro.innerText = "Valor informado é inválido!";
+    return false;
+  }
+  input.style.borderColor = 'black';
+  msgErro.innerText = "";
+  return true;
+}
+
+
+
+
