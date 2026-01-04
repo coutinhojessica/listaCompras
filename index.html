@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <input
+                    type="text"
+                    name="produto"
+                    id="produto"
+                    placeholder="Nome do produto"
+                    onblur="validarProduto(this)"
+                />
+                <p class="produtoErro"></p>
+            </fieldset>
+            <fieldset>
+                <input
+                    type="text"
+                    name="categoria"
+                    id="categoria"
+                    placeholder="Categoria do Produto"
+                    onblur="validarCategoria(this)"
+                />
+                <p class="categoriaErro"></p>
+            </fieldset>
+            <fieldset>
+                <input
+                    type="number"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="Quantidade"
+                />
+            </fieldset>
+            <fieldset>
+                <input
+                    type="number"
+                    name="preco"
+                    id="preco"
+                    placeholder="Preço do produto"
+                />
+            </fieldset>
+            <button id="btnEnviar">Enviar</button>
+        </form>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
